@@ -2,7 +2,8 @@
 #include <string.h>
 
 char 	*ft_strcpy(char *dest, char *src)
-{
+{	char *orig_dest = dest
+ 
 	while(*src != '\0')
 	{
 		*dest = *src;
@@ -10,7 +11,7 @@ char 	*ft_strcpy(char *dest, char *src)
 		src++;
 	}
 	*dest = '\0';
-	return (dest);
+	return (orig_dest);
 }
 
 int main()
