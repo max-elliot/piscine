@@ -3,8 +3,6 @@
 
 char 	*ft_strcpy(char *dest, char *src)
 {
-	// copy string from a source to a destination
-	char *orig_dest = dest;
 	while(*src != '\0')
 	{
 		*dest = *src;
@@ -12,18 +10,16 @@ char 	*ft_strcpy(char *dest, char *src)
 		src++;
 	}
 	*dest = '\0';
-	return orig_dest;
-	
+	return (dest);
 }
 
 int main()
 {
-	char source[] = "Hello!";
-	char destination [50];
+	char *source = "Hello!";
+	char *destination ="HelloHello!";
 
-	*ft_strcpy(destination, source);
-	
-	printf("Source: %s\n", source);
-	printf("Destination: %s\n", destination);
+	printf("Before; %s\n", destination);
+	ft_strcpy(destination, source);
+	printf("After: %s\n", destination);
 	return (0);
 }
